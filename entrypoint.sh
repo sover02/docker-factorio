@@ -8,11 +8,11 @@
 # - Uses `interact.sh` to pass keystrokes to the server process, while printing its output
 # - Cleans up stale processes before exiting
 
-FIFO_NAME=factorio-server-fifo
+FIFO_NAME="factorio-server-fifo"
 LOG_FILE="factorio-server.log"
 FACTORIO_PID_FILE="factorio-server.pid"
 
-# Create fifo for interaction with the process and and keep it open
+# Create fifo for interaction with the factorio server process
 rm ${FIFO_NAME} > /dev/null 2>&1
 mkfifo ${FIFO_NAME}
 
@@ -24,10 +24,10 @@ if [ ! -f "$(cat last-game.txt 2> /dev/null)" ]; then
 fi
 
 # Start the server and track the process ID
-rm factorio-server.pid > /dev/null 2>&1
+rm ${FACTORIO_PID_FILE} > /dev/null 2>&1
 ./factorio/bin/x64/factorio --start-server $(cat last-game.txt) > ${LOG_FILE} 2>&1 < ${FIFO_NAME} &
 echo $! > ${FACTORIO_PID_FILE}
 
 # Kick off the server and pass keystrokes to the server process' stdin
 ./interact.sh
-kill $(cat ${FACTORIO_PID_FILE})
+kill $(cat ${FACTORIO_PID_FILE} > /dev/null 2>&1

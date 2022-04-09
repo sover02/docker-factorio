@@ -13,4 +13,4 @@ cat > ${FIFO_NAME} <&0 2> /dev/null &
 stdin_cat_pid=$!
 
 tail -f ${LOG_FILE}
-kill ${stdin_cat_pid}
+kill ${stdin_cat_pid} > /dev/null 2>&1
