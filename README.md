@@ -80,3 +80,8 @@ david@focus docker-factorio % # We're ready to go
 - Load and backup savefiles from s3?
 - Small REST API to control the server
 - Kubernetes boilerplate configs
+
+## Links
+
+Repository: https://github.com/sover02/docker-factorio
+Dockerhub: https://hub.docker.com/repository/docker/6davids/docker-factorio
