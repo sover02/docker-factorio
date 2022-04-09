@@ -10,14 +10,14 @@ docker build -t docker-factorio .
 ## Running
 On x86 machines:
 ```bash
-docker run --name docker-factorio -itp 34197:34197/udp docker-factorio
-docker run --name docker-factorio -itdp 34197:34197/udp docker-factorio # runs detached
+docker run --name docker-factorio -itp 34197:34197/udp 6davids/docker-factorio
+docker run --name docker-factorio -itdp 34197:34197/udp 6davids/docker-factorio # runs detached
 ```
 
 On m1 Macs:
 ```bash
-docker run --name docker-factorio -itp 34197:34197/udp --platform linux/amd64 docker-factorio # ctrl-c kills server
-docker run --name docker-factorio -itp 34197:34197/udp --platform linux/amd64 docker-factorio # runs detached
+docker run --name docker-factorio -itp 34197:34197/udp --platform linux/amd64 6davids/docker-factorio # ctrl-c kills server
+docker run --name docker-factorio -itp 34197:34197/udp --platform linux/amd64 6davids/docker-factorio # runs detached
 ```
 
 ## Server Commands
@@ -68,7 +68,7 @@ david@focus docker-factorio % docker run --name docker-factorio -it \
 > -p 34197:34197/udp \
 > --mount type=bind,source=~/factorio-stuffs/saved-games,target=/app/factorio/saved-games \
 > --mount type=bind,source=~/factorio-stuffs/last-game.txt,target=/app/factorio/last-game.txt \
-> docker-factorio
+> 6davids/docker-factorio
 abdac7023091
 david@focus docker-factorio % # We're ready to go
 ```
