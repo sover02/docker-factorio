@@ -43,7 +43,7 @@ sup
 
 Non-Interactive (for scripts or one-offs):
 ```bash
-root@docker-factorio:/app # Hop into the container
+david@focus docker-factorio % # Hop into the container
 david@focus docker-factorio % docker exec -it docker-factorio bash
 root@docker-factorio:/app # Send commands to the server
 root@docker-factorio:/app ./run-command.sh "sup"
@@ -54,12 +54,36 @@ root@docker-factorio:/app ./run-command.sh "/kick david lol"
 
 Or, if you don't need to see the command output:
 ```bash
-root@docker-factorio:/app # Hop into the container
+david@focus docker-factorio % # Hop into the container
 david@focus docker-factorio % docker exec -it docker-factorio bash
 root@docker-factorio:/app # Send commands to the server
 root@docker-factorio:/app echo "sup" > ./factorio-server-fifo
 root@docker-factorio:/app echo "/kick david lol" > ./factorio-server-fifo
 ```
+
+## Starting, Stopping, Restarting the Server
+
+The image comes with a few scripts to help managing server execution.
+
+```bash
+root@docker-factorio:/app # Hop into the container
+david@focus docker-factorio % docker exec -it docker-factorio bash
+root@docker-factorio:/app # Stop the factorio server
+root@docker-factorio:/app ./stop-server.sh 
+Stopping Factorio Server...
+Done!
+root@docker-factorio:/app # The server starts on it's own, but you can start it again after stopping it.
+root@docker-factorio:/app ./start-server.sh 
+Starting Factorio Server...
+Done!
+root@docker-factorio:/app # Cycle the server.  Useful after config changes.
+root@docker-factorio:/app ./restart-server.sh 
+Stopping Factorio Server...
+Done!
+Starting Factorio Server...
+Done!
+```
+
 
 ## Saved Games
 
