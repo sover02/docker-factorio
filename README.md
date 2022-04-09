@@ -66,7 +66,7 @@ david@focus docker-factorio % # Start the container detached, with ports mounted
 david@focus docker-factorio % docker run --name docker-factorio -it \
 > -d
 > -p 34197:34197/udp \
-> --mount type=bind,source=~/factorio-stuffs/saved-games,target=/app/factorio/saved-games \
+> --mount type=bind,source=~/factorio-stuffs/saved-games,target=/app/factorio/saves \
 > --mount type=bind,source=~/factorio-stuffs/last-game.txt,target=/app/factorio/last-game.txt \
 > 6davids/docker-factorio
 abdac7023091
