@@ -73,7 +73,7 @@ abdac7023091
 david@focus docker-factorio % # We're ready to go
 ```
 
-# Custom Settings
+## Custom Settings
 
 Settings can be managed the same way that saved games are. Mount files in the default locations to populate the server configs. 
 
