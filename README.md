@@ -1,8 +1,6 @@
 # docker-factorio
 
-A small containered Factorio server that supports interactive and non-interactive server commands. Suitable for local and hosted servers.
-
-Runs on x86_64 and Apple M1 architectures.
+A small, simple containered Factorio server that supports interactive and non-interactive server commands. Suitable for local and hosted servers. Simple, low-configuration and highly customizable. 
 
 ## Building the image
 ```bash
@@ -75,11 +73,17 @@ abdac7023091
 david@focus docker-factorio % # We're ready to go
 ```
 
+# Custom Settings
+
+Settings can be managed the same way that saved games are. Mount files in the default locations to populate the server configs. 
+
 ## To-Do
 - Commands to start, stop, and restart the server
 - Load and backup savefiles from s3?
 - Small REST API to control the server
+- Create settings examples
 - Kubernetes boilerplate configs
+- Github action to build and push automatically with new factorio updates
 
 ## Links
 
