@@ -81,11 +81,12 @@ Settings can be managed the same way that saved games are. Mount files in the de
 - Commands to start, stop, and restart the server
 - Load and backup savefiles from s3?
 - Small REST API to control the server
+- RCON support?
 - Create settings examples
 - Kubernetes boilerplate configs
 - Github action to build and push automatically with new factorio updates
 
 ## Links
 
-Repository: https://github.com/sover02/docker-factorio
-Dockerhub: https://hub.docker.com/repository/docker/6davids/docker-factorio
+- Repository: https://github.com/sover02/docker-factorio
+- Dockerhub: https://hub.docker.com/repository/docker/6davids/docker-factorio
