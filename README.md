@@ -79,3 +79,4 @@ david@focus docker-factorio % # We're ready to go
 - Commands to start, stop, and restart the server
 - Load and backup savefiles from s3?
 - Small REST API to control the server
+- Kubernetes boilerplate configs
