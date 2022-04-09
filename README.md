@@ -17,7 +17,7 @@ docker run --name docker-factorio -itdp 34197:34197/udp 6davids/docker-factorio 
 On m1 Macs:
 ```bash
 docker run --name docker-factorio -itp 34197:34197/udp --platform linux/amd64 6davids/docker-factorio # ctrl-c kills server
-docker run --name docker-factorio -itp 34197:34197/udp --platform linux/amd64 6davids/docker-factorio # runs detached
+docker run --name docker-factorio -itdp 34197:34197/udp --platform linux/amd64 6davids/docker-factorio # runs detached
 ```
 
 ## Server Commands
