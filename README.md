@@ -41,7 +41,18 @@ sup
 /kick david lol
 ```
 
-Non-Interactive:
+Non-Interactive (for scripts or one-offs):
+```bash
+root@docker-factorio:/app # Hop into the container
+david@focus docker-factorio % docker exec -it docker-factorio bash
+root@docker-factorio:/app # Send commands to the server
+root@docker-factorio:/app ./run-command.sh "sup"
+2022-04-09 17:03:11 [CHAT] <server>: sup
+root@docker-factorio:/app ./run-command.sh "/kick david lol"
+2022-04-09 17:03:24 [KICK] david was kicked by <server>. Reason: lol. 1352.490 Info ServerMultiplayerManager.cpp:1061: Disconnect notification for peer (1)
+```
+
+Or, if you don't need to see the command output:
 ```bash
 root@docker-factorio:/app # Hop into the container
 david@focus docker-factorio % docker exec -it docker-factorio bash
