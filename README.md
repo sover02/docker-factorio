@@ -1,6 +1,6 @@
 # docker-factorio
 
-A small, simple containered Factorio server that supports interactive and non-interactive server commands. Suitable for local and hosted servers. Simple, low-configuration and highly customizable. 
+A small, simple containerized Factorio server that supports interactive and non-interactive server commands. Suitable for local and hosted servers. Simple, low-configuration and highly customizable. 
 
 ## Building the image
 ```bash
