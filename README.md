@@ -17,7 +17,7 @@ docker run --name docker-factorio -itdp 34197:34197/udp 6davids/docker-factorio 
 On m1 Macs:
 ```bash
 docker run --name docker-factorio -itp 34197:34197/udp --platform linux/amd64 6davids/docker-factorio # ctrl-c kills server
-docker run --name docker-factorio -itp 34197:34197/udp --platform linux/amd64 6davids/docker-factorio # runs detached
+docker run --name docker-factorio -itdp 34197:34197/udp --platform linux/amd64 6davids/docker-factorio # runs detached
 ```
 
 ## Server Commands
@@ -60,7 +60,7 @@ Drop your save files in the `saves/` directory, and then enter the name of the s
 
 Example: 
 ```bash
-david@focus docker-factorio % cp my-cool-saved-game.zip > ~/factorio-stuffs/saved-games/ 
+david@focus docker-factorio % cp my-cool-saved-game.zip ~/factorio-stuffs/saved-games/ 
 david@focus docker-factorio % echo "my-cool-saved-game.zip" > ~/factorio-stuffs/last-game.txt 
 david@focus docker-factorio % # Start the container detached, with ports mounted, and the two binds mentioned above
 david@focus docker-factorio % docker run --name docker-factorio -it \
