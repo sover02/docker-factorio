@@ -1,5 +1,6 @@
 # syntax=docker/dockerfile:1
 FROM --platform=linux/amd64 ubuntu:latest
+LABEL MAINTAINER='David Anderson "david@misplaced.us"'
 RUN apt-get update -y -qq \
     && apt-get install -y -qq wget xz-utils
 COPY . /app
